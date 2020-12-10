@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 
 class Display extends Component {
   render() {
-    return <div className={'display'}>{this.props.value}</div>;
+    const cssDisplay =
+      this.props.operation === 4 && this.props.zero ? 'display red' : 'display';
+    return <div className={cssDisplay}>{this.props.value}</div>;
   }
 }
 
